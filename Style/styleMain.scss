@@ -1,0 +1,229 @@
+$main-font: 'Verdand', sans-serif; // Default font for website
+$main-sizing: 16px; // Default font size for website
+$colours: (
+    'darkBlue': #0C586E,
+    'white': #FFFFFC,
+    'lightGray': #91818A,
+    'brightBlue': #4BB3FD,
+    'black': #120C03
+); // Colours used in the website
+
+@function get-colour($colour-Key) {
+    @return map-get($colours, $colour-Key);
+} // Function to get colour hex value from map
+
+:root { // Global CSS declarations
+    font-family: $main-font; // Set default font for website
+    font-size: $main-sizing; // Set default font size for website
+}
+
+body {
+    background-color: get-colour('white'); // Set background colour to white
+    color: get-colour('black'); // Set text colour to black
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: get-colour('darkBlue');
+
+    .araLogo {
+        width: 40%;
+        max-width: 40%;
+    }
+
+    h1 {
+        flex: 1;
+        color: get-colour('white');
+        font-weight: bold;
+        font-size: calc(3.0rem + 1vw); // Dynamic font size
+        margin: 0;
+        text-align: right;
+    }
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: get-colour('darkBlue');
+
+    .search_form {
+        display: flex;
+        width: 60%;
+
+        .search_form_input {
+            flex: 1;
+            font-size: 1.1em;
+            padding: 0.5em;
+            font-size: $main-sizing;
+            background-color: get-colour('brightBlue');
+            color: get-colour('white');
+            border: none;
+            border-radius: 1em;
+            outline: none;
+            box-shadow: none;
+
+            &:focus {
+                border-color: get-colour('brightBlue');
+            }
+        }
+
+        .search_form_button {
+            background: url('Assets/Icons/search-icon.svg') no-repeat center center;
+            background-size: contain;
+            color: get-colour('white');
+            width: 2em;
+            height: 2em;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            outline: none;
+            img{
+                width: 3em;
+            }
+        }
+    }
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  
+    .carousel_image_container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .carousel_image {
+      display: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .carousel_image.active {
+      display: block;
+    }
+  
+    .text_overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      font-size: 1.5rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 5;
+    }
+  
+    .carousel_button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+  
+      &.prev {
+        left: 10px;
+      }
+  
+      &.next {
+        right: 10px;
+      }
+  
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+}
+
+.about,.upcomingEvents,.contact {
+    padding: 2rem;
+    text-align: center;
+
+    h2 {
+        font-size: 2rem;
+        color: get-colour('brightBlue');
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: get-colour('black');
+    }
+    .emailLink, .phoneLink {
+        font-size: 1em;
+        color: get-colour('brightBlue');
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+footer {
+    .footer_section {
+        padding: 2rem;
+        background-color: get-colour('darkBlue');
+        color: get-colour('white');
+        text-align: center;
+
+        h3 {
+            font-size: 1.5rem;
+            color: get-colour('brightBlue');
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: get-colour('white');
+        }
+
+        a {
+            font-size: 1rem;
+            color: get-colour('brightBlue');
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .socials {
+            margin-top: 1rem;
+
+            a {
+                display: inline-block;
+                margin: 0 0.5rem;
+                width: 5em;
+                height: 5em;
+
+                img {
+                    width: 5em;
+                    height: 5em;
+                    fill: get-colour('brightBlue');
+                }
+
+                &:hover svg {
+                    fill: get-colour('white');
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,189 @@
+:root {
+  font-family: "Verdand", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: #FFFFFC;
+  color: #120C03;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #0C586E;
+}
+header .araLogo {
+  width: 40%;
+  max-width: 40%;
+}
+header h1 {
+  flex: 1;
+  color: #FFFFFC;
+  font-weight: bold;
+  font-size: calc(3rem + 1vw);
+  margin: 0;
+  text-align: right;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #0C586E;
+}
+.search .search_form {
+  display: flex;
+  width: 60%;
+}
+.search .search_form .search_form_input {
+  flex: 1;
+  font-size: 1.1em;
+  padding: 0.5em;
+  font-size: 16px;
+  background-color: #4BB3FD;
+  color: #FFFFFC;
+  border: none;
+  border-radius: 1em;
+  outline: none;
+  box-shadow: none;
+}
+.search .search_form .search_form_input:focus {
+  border-color: #4BB3FD;
+}
+.search .search_form .search_form_button {
+  background: url("Assets/Icons/search-icon.svg") no-repeat center center;
+  background-size: contain;
+  color: #FFFFFC;
+  width: 2em;
+  height: 2em;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+}
+.search .search_form .search_form_button img {
+  width: 3em;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.carousel .carousel_image_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.carousel .carousel_image {
+  display: none;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.carousel .carousel_image.active {
+  display: block;
+}
+.carousel .text_overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 5;
+}
+.carousel .carousel_button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+.carousel .carousel_button.prev {
+  left: 10px;
+}
+.carousel .carousel_button.next {
+  right: 10px;
+}
+.carousel .carousel_button img {
+  width: 30px;
+  height: 30px;
+}
+
+.about, .upcomingEvents, .contact {
+  padding: 2rem;
+  text-align: center;
+}
+.about h2, .upcomingEvents h2, .contact h2 {
+  font-size: 2rem;
+  color: #4BB3FD;
+  margin-bottom: 1rem;
+}
+.about p, .upcomingEvents p, .contact p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #120C03;
+}
+.about .emailLink, .about .phoneLink, .upcomingEvents .emailLink, .upcomingEvents .phoneLink, .contact .emailLink, .contact .phoneLink {
+  font-size: 1em;
+  color: #4BB3FD;
+  text-decoration: none;
+}
+.about .emailLink:hover, .about .phoneLink:hover, .upcomingEvents .emailLink:hover, .upcomingEvents .phoneLink:hover, .contact .emailLink:hover, .contact .phoneLink:hover {
+  text-decoration: underline;
+}
+
+footer .footer_section {
+  padding: 2rem;
+  background-color: #0C586E;
+  color: #FFFFFC;
+  text-align: center;
+}
+footer .footer_section h3 {
+  font-size: 1.5rem;
+  color: #4BB3FD;
+  margin-bottom: 1rem;
+}
+footer .footer_section p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #FFFFFC;
+}
+footer .footer_section a {
+  font-size: 1rem;
+  color: #4BB3FD;
+  text-decoration: none;
+}
+footer .footer_section a:hover {
+  text-decoration: underline;
+}
+footer .footer_section .socials {
+  margin-top: 1rem;
+}
+footer .footer_section .socials a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  width: 5em;
+  height: 5em;
+}
+footer .footer_section .socials a img {
+  width: 5em;
+  height: 5em;
+  fill: #4BB3FD;
+}
+footer .footer_section .socials a:hover svg {
+  fill: #FFFFFC;
+}/*# sourceMappingURL=styleMain.css.map */
