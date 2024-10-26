@@ -301,4 +301,140 @@ footer .footer_section .socials a:hover svg {
 }
 .tiles .tile_sidebyside .tile_right img {
   width: 50%;
+}
+
+.manage-users {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+.manage-users .user-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.manage-users .user-list h2 {
+  font-size: 2rem;
+  color: #0C586E;
+  margin-bottom: 1rem;
+}
+.manage-users .user-list .create-user-button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #FFFFFC;
+  background-color: #4BB3FD;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.manage-users .user-list .create-user-button:hover {
+  background-color: #0C586E;
+}
+.manage-users .user-list ul {
+  list-style: none;
+  padding: 0;
+}
+.manage-users .user-list ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background-color: #91818A;
+  border-radius: 5px;
+}
+.manage-users .user-list ul li span {
+  font-size: 1rem;
+  color: #FFFFFC;
+  font-weight: bolder;
+}
+.manage-users .user-list ul li .edit-user-button,
+.manage-users .user-list ul li .delete-user-button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #FFFFFC;
+  background-color: #0C586E;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.manage-users .user-list ul li .edit-user-button:hover,
+.manage-users .user-list ul li .delete-user-button:hover {
+  background-color: #4BB3FD;
+}
+.manage-users .user-list ul li .delete-user-button {
+  background-color: #bd0b0b;
+}
+.manage-users .user-list ul li .delete-user-button:hover {
+  background-color: #0C586E;
+}
+.manage-users .user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #91818A;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.manage-users .user-form h2 {
+  font-size: 2rem;
+  color: #0C586E;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.manage-users .user-form .details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.manage-users .user-form .details label {
+  font-size: 1rem;
+  color: #120C03;
+  margin-bottom: 1rem;
+}
+.manage-users .user-form .details input[type=text], .manage-users .user-form .details input[type=email] {
+  width: 98%;
+  margin-top: 0.3em;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #91818A;
+  border-radius: 0.5em;
+  outline: none;
+}
+.manage-users .user-form .details input[type=text]:focus, .manage-users .user-form .details input[type=email]:focus {
+  border-color: #4BB3FD;
+}
+.manage-users .user-form .details .save-button,
+.manage-users .user-form .details .reset-password-button,
+.manage-users .user-form .details .cancel-button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #FFFFFC;
+  background-color: #0C586E;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.manage-users .user-form .details .save-button:hover,
+.manage-users .user-form .details .reset-password-button:hover,
+.manage-users .user-form .details .cancel-button:hover {
+  background-color: #4BB3FD;
+}
+.manage-users .user-form .details .reset-password-button {
+  background-color: #4BB3FD;
+}
+.manage-users .user-form .details .reset-password-button:hover {
+  background-color: #0C586E;
+}
+.manage-users .user-form .details .cancel-button {
+  background-color: #bd0b0b;
+  color: #FFFFFC;
+}
+.manage-users .user-form .details .cancel-button:hover {
+  background-color: #0C586E;
+  color: #FFFFFC;
 }/*# sourceMappingURL=styleMain.css.map */

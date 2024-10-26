@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>&lt;EMERGE&gt; | Admin Portal</title>
+        <title>&lt;EMERGE&gt; | Manage Users</title>
         <meta charset="UTF-8">
         <meta http-equiv="Content-Language" content="en-NZ">
         <link rel="stylesheet" type="text/css" href="Style/styleMain.css">
@@ -19,45 +19,45 @@
                 </button>
             </form>
         </div>
-        <div class="tiles">
-            <div class="tile">
-                <h2>Welcome, Name!</h2>
-                <p>There are 2 past Emerge events and one upcoming.</p>
+        <div class="manage-users">
+            <div class="user-list">
+                <h2>Manage Users</h2>
+                <button class="create-user-button">Create New User</button>
+                <ul>
+                    <!-- Example user list item -->
+                    <li>
+                        <span>John Doe</span>
+                        <button class="edit-user-button">Edit</button>
+                        <button class="delete-user-button">Delete</button>
+                    </li>
+                </ul>
             </div>
-            <a href="manageUsers.html" class="tile_link">
-                    <h2>Manage Users </h2>
-                    <div class="tile_sidebyside">
-                        <div class="tile_left">
-                            <p>View and edit user information.</p>
-                        </div>
-                        <div class="tile_right">
-                            <img src="Assets/Icons/add-user.svg" alt="Add User Icon">
-                        </div>
-                    </div>  
-            </a>
-            <a href="myDetails.html" class="tile_link">
-                    <h2>My Details</h2>
-                    <div class="tile_sidebyside">
-                        <div class="tile_left">
-                            <p>View and update your personal details.</p>
-                        </div>
-                        <div class="tile_right">
-                            <img src="Assets/Icons/my-details.svg" alt="My Details Icon">
-                        </div>
+            <div class="user-form">
+                <h2>User Details</h2>
+                <form class="details">
+                    <div class="form-group">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" required>
                     </div>
-            </a>
-            <a href="manageEvents.html" class="tile_link">
-                <h2>Manage Events</h2>
-                <div class="tile_sidebyside">
-                    <div class="tile_left">
-                        <p>View and manage events.</p>
+                    <div class="form-group">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" required>
                     </div>
-                    <div class="tile_right">
-                        <img src="Assets/Icons/manage-event.svg" alt="Manage Event Icon">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
-                </div>
-            </a>
+                    <div class="form-group">
+                        <label for="organization">Organization:</label>
+                        <input type="text" id="organization" name="organization" required>
+                    </div>
+                    <button type="submit" class="save-button">Save</button>
+                    <button type="button" class="reset-password-button">Reset Password</button>
+                    <button type="button" class="cancel-button">Cancel</button>
+                </form>
+            </div>
         </div>
+        <script src="JavaScript/manageUsers.js"></script>
 
         <footer>
             <div class="footer_section">
