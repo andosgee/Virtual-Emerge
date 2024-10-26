@@ -55,8 +55,8 @@ header h1 {
   border-color: #4BB3FD;
 }
 .search .search_form .search_form_button {
-  background: url("Assets/Icons/search-icon.svg") no-repeat center center;
-  background-size: contain;
+  background: url("./Assets/Icons/search-icon.svg") no-repeat center center;
+  background-size: 3em;
   color: #FFFFFC;
   width: 2em;
   height: 2em;
@@ -244,4 +244,61 @@ footer .footer_section .socials a:hover svg {
 }
 .main .login_section .login_form button:hover {
   background-color: #4BB3FD;
+}
+
+.tiles {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+}
+.tiles .tile, .tiles .tile_link {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #120C03;
+}
+.tiles .tile h2, .tiles .tile_link h2 {
+  font-size: 1.5rem;
+  color: #0C586E;
+  margin-bottom: 0.5rem;
+}
+.tiles .tile p, .tiles .tile_link p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.tiles .tile {
+  background-color: #4BB3FD;
+}
+.tiles .tile_link {
+  background-color: #4BB3FD;
+  transition: background-color 0.3s;
+}
+.tiles .tile_link:hover {
+  background-color: #91818A;
+  color: #FFFFFC;
+}
+.tiles .tile_sidebyside {
+  display: flex;
+  flex-direction: row;
+}
+.tiles .tile_sidebyside .tile_left {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.tiles .tile_sidebyside .tile_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 50%;
+}
+.tiles .tile_sidebyside .tile_right img {
+  width: 50%;
 }/*# sourceMappingURL=styleMain.css.map */
