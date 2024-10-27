@@ -395,7 +395,7 @@ footer .footer_section .socials a:hover svg {
   color: #120C03;
   margin-bottom: 1rem;
 }
-.manage-users .user-form .details input[type=text], .manage-users .user-form .details input[type=email] {
+.manage-users .user-form .details input[type=text], .manage-users .user-form .details input[type=email], .manage-users .user-form .details input[type=password] {
   width: 98%;
   margin-top: 0.3em;
   padding: 0.5rem;
@@ -404,7 +404,7 @@ footer .footer_section .socials a:hover svg {
   border-radius: 0.5em;
   outline: none;
 }
-.manage-users .user-form .details input[type=text]:focus, .manage-users .user-form .details input[type=email]:focus {
+.manage-users .user-form .details input[type=text]:focus, .manage-users .user-form .details input[type=email]:focus, .manage-users .user-form .details input[type=password]:focus {
   border-color: #4BB3FD;
 }
 .manage-users .user-form .details .save-button,

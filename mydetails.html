@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>&lt;EMERGE&gt; | My Details</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Language" content="en-NZ">
+        <link rel="stylesheet" type="text/css" href="Style/styleMain.css">
+    </head>
+    <body>
+        <header>
+            <img src="Assets/Icons/araLandscapeWhite.png" alt="Ara Logo" class="araLogo">
+            <h1>&lt;EMERGE&gt;</h1>
+        </header>
+        <div class="search">
+            <form method="post" class="search_form">
+                <input type="text" class="search_form_input" placeholder="Search...">
+                <button type="submit" class="search_form_button">
+                    <img src="Assets/Icons/search-icon.svg" alt="Search">
+                </button>
+            </form>
+        </div>
+        <div class="manage-users">
+            <div class="user-form">
+                <form class="details">
+                    <h2>My Details</h2>
+                    <div class="form-group">
+                        <label for="first-name">First Name:</label> <br>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name:</label> <br>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label> <br>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="organization">Organization:</label> <br>
+                        <input type="text" id="organization" name="organization" required>
+                    </div>
+                    <button type="submit" class="save-button">Save</button>
+                    <button type="button" class="cancel-button">Cancel</button>
+                </form>
+            </div>
+            <div class="user-form">
+                <form class="details">
+                    <h2>Change Password</h2>
+                    <div class="form-group">
+                        <label for="new-password">New Password:</label>
+                        <input type="password" id="new-password" name="new-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                    <button type="submit" class="save-button">Save</button>
+                </form>
+            </div>
+        </div>
+        <script src="JavaScript/mydetails.js"></script>
+        <footer>
+            <div class="footer_section">
+                <h3>Contact Information &amp; Socials</h3>
+                <p>Email: <a href="mailto:email@email">email@email</a></p>
+                <p>Phone: <a href="tel:123456789">123456789</a></p>
+                <div class="socials">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="Assets/Icons/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <img src="Assets/Icons/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.ara.ac.nz" target="_blank">
+                        <img src="Assets/Icons/website.svg" alt="Website">
+                    </a>
+                </div>
+            </div>
+            <div class="footer_section">
+                <h3>Not an Admin?</h3>
+                <p><a href="index.html">Return to Home</a></p>
+            </div>
+            <div class="footer_section">
+                <p>&copy; 2024 Ara Institute of Canterbury. All rights reserved.</p>
+                <p><a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
+            </div>
+        </footer>
+    </body>
+</html>
