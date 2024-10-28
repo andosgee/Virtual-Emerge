@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>&lt;EMERGE&gt; | Manage Events</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Language" content="en-NZ">
+        <link rel="stylesheet" type="text/css" href="Style/styleMain.css">
+    </head>
+    <body>
+        <header>
+            <img src="Assets/Icons/araLandscapeWhite.png" alt="Ara Logo" class="araLogo">
+            <h1>&lt;EMERGE&gt;</h1>
+        </header>
+        <div class="search">
+            <form method="post" class="search_form">
+                <input type="text" class="search_form_input" placeholder="Search...">
+                <button type="submit" class="search_form_button">
+                    <img src="Assets/Icons/search-icon.svg" alt="Search">
+                </button>
+            </form>
+        </div>
+        <div class="manage-users">
+            <div class="user-list">
+                <h2>Manage Events</h2>
+                <button class="create-user-button">Create New Event</button>
+                <ul>
+                    <!-- Example user list item -->
+                    <li>
+                        <span>Emerge 2024, Semester One</span>
+                        <button class="edit-user-button">Edit</button>
+                        <button class="delete-user-button">Delete</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="user-form">
+                <h2>Event Details</h2>
+                <form class="details">
+                    <div class="form-group">
+                        <label for="first-name">Event Name:</label>
+                        <input type="text" id="event-name" name="event-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-date">Date:</label>
+                        <input type="date" id="event-date" name="event-date">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Tour Link:</label>
+                        <input type="text" id="event-link" name="event-link" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="add-student-button" id="add-student-button">Add Student</button>
+                        <button type="button" class="remove-student-button" id="remove-student-button">Remove Student</button>
+                    </div>
+                    <script src="JavaScript/manageEvents.js"></script>
+                    <div class="form-group">
+                        <label for="publish">Publish:</label>
+                        <input type="checkbox" id="publish" name="publish">
+                    </div>
+                    <button type="submit" class="save-button">Save</button>
+                    <button type="button" onclick="location.href='adminPortal.html';" class="cancel-button">Cancel</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="footer_section">
+                <h3>Contact Information &amp; Socials</h3>
+                <p>Email: <a href="mailto:email@email">email@email</a></p>
+                <p>Phone: <a href="tel:123456789">123456789</a></p>
+                <div class="socials">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="Assets/Icons/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <img src="Assets/Icons/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.ara.ac.nz" target="_blank">
+                        <img src="Assets/Icons/website.svg" alt="Website">
+                    </a>
+                </div>
+            </div>
+            <div class="footer_section">
+                <h3>Not an Admin?</h3>
+                <p><a href="index.html">Return to Home</a></p>
+            </div>
+            <div class="footer_section">
+                <p>&copy; 2024 Ara Institute of Canterbury. All rights reserved.</p>
+                <p><a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
+            </div>
+        </footer>
+    </body>
+</html>

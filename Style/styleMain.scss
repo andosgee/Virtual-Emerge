@@ -473,10 +473,75 @@ footer {
                 }
             }
 
+            input[type="date"] {
+                width: 98%;
+                padding: 0.5rem;
+                margin-top: 0.3em;
+                font-size: 1rem;
+                border: 1px solid get-colour('lightGray');
+                border-radius: 0.5em;
+                outline: none;
+                background-color: get-colour('white');
+                color: get-colour('black');
+                cursor: pointer;
+
+                &:focus {
+                    border-color: get-colour('brightBlue');
+                }
+            }
+
+            input[type="checkbox"] {
+                width: 1rem;
+                height: 1rem;
+                margin-top: 0.3em;
+                cursor: pointer;
+                accent-color: get-colour('brightBlue');
+
+                &:focus {
+                    outline: 2px solid get-colour('brightBlue');
+                }
+            }
+
+            input[type="file"] {
+                width: 98%;
+                padding: 0.5rem;
+                margin-top: 0.3em;
+                font-size: 1rem;
+                border: 1px solid get-colour('lightGray');
+                border-radius: 0.5em;
+                outline: none;
+                background-color: get-colour('white');
+                color: get-colour('black');
+                cursor: pointer;
+
+                &:focus {
+                    border-color: get-colour('brightBlue');
+                }
+
+                &::file-selector-button {
+                    padding: 0.5rem;
+                    font-size: 1rem;
+                    color: get-colour('white');
+                    background-color: get-colour('darkBlue');
+                    border: none;
+                    border-radius: 0.5em;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+
+                    &:hover {
+                        background-color: get-colour('brightBlue');
+                    }
+                }
+            }
+
             .save-button,
             .reset-password-button,
+            .add-student-button,
+            .remove-student-button,
             .cancel-button {
                 padding: 0.75rem;
+                margin-top: 1em;
+                width: 90%;
                 font-size: 1rem;
                 color: get-colour('white');
                 background-color: get-colour('darkBlue');
@@ -498,7 +563,7 @@ footer {
                 }
             }
 
-            .cancel-button {
+            .cancel-button,.remove-student-button {
                 background-color: get-colour('red');
                 color: get-colour('white');
 
