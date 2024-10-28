@@ -13,6 +13,14 @@ document.getElementById('add-student-button').addEventListener('click', function
             <input type="text" name="last-name" required>
         </div>
         <div class="form-group">
+            <label for="pathway">Pathway:</label>
+            <input type="text" name="pathway" required>
+        </div>
+        <div class="form-group">
+            <label for="project-name">Project Name:</label>
+            <input type="text" name="project-name" required>
+        </div>
+        <div class="form-group">
             <label for="headshot">Headshot:</label>
             <input type="file" name="headshot" accept="image/*">
         </div>
