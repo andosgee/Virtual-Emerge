@@ -768,6 +768,30 @@ footer .footer_section .socials a:hover svg {
   .manage-users .user-form .save-button, .manage-users .user-form .reset-password-button, .manage-users .user-form .add-student-button, .manage-users .user-form .remove-student-button, .manage-users .user-form .cancel-button {
     min-width: 100%;
   }
+  .search_expanded {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .search_expanded .search_term {
+    width: 50%;
+  }
+  .search_expanded .search_term input {
+    min-width: 80%;
+  }
+  .search_results {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
+  .search_results .result {
+    width: 40%;
+    height: auto;
+  }
+  .search_results .result .image {
+    max-width: 20%;
+  }
   footer {
     flex-direction: row;
     justify-content: space-evenly;

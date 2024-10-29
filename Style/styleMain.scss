@@ -868,6 +868,32 @@ footer {
         }
     }
 
+    .search_expanded{
+        flex-direction: row;
+        justify-content: space-evenly;
+        .search_term{
+            width: 50%;
+            input{
+                min-width: 80%;
+            }
+        }
+    }
+
+    .search_results{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 1rem;
+        .result{
+            width: 40%;
+            height: auto;
+            .image{
+                max-width: 20%;
+            }
+        }
+    }
+
     footer{
         flex-direction: row;
         justify-content: space-evenly;
