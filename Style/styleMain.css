@@ -13,18 +13,18 @@ body {
 header {
   display: flex;
   align-items: center;
-  padding: 1rem;
+  padding: 1em;
   background-color: #0C586E;
 }
 header .araLogo {
-  width: 40%;
-  max-width: 40%;
+  padding: 1em 1em 2em 1em;
+  max-width: 13em;
 }
 header h1 {
   flex: 1;
   color: #FFFFFC;
   font-weight: bold;
-  font-size: calc(2.5rem + 1vw);
+  font-size: calc(1.8rem + 1vw);
   margin: 0;
   text-align: right;
 }
@@ -146,6 +146,11 @@ header h1 {
   text-decoration: underline;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 footer .footer_section {
   padding: 2rem;
   background-color: #0C586E;
@@ -716,4 +721,34 @@ footer .footer_section .socials a:hover svg {
 .event_students ul li a:hover {
   text-decoration: underline;
   font-weight: bolder;
+}
+
+@media (min-width: 768px) {
+  .carousel {
+    display: flex;
+    justify-content: center;
+    max-height: 25em;
+    background-color: #120C03;
+  }
+  .carousel .carousel_image_container {
+    height: 25em;
+    width: auto;
+  }
+  .carousel .carousel_image {
+    height: 100%;
+    width: auto;
+  }
+  .carousel .carousel_button {
+    color: #FFFFFC;
+    font-size: larger;
+  }
+  .about, .upcomingEvents, .contact {
+    text-align: justify;
+  }
+  footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: #0C586E;
+  }
 }/*# sourceMappingURL=styleMain.css.map */

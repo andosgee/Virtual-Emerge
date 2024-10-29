@@ -28,19 +28,19 @@ body {
 header {
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: 1em;
     background-color: get-colour('darkBlue');
 
     .araLogo {
-        width: 40%;
-        max-width: 40%;
+        padding: 1em 1em 2em 1em;
+        max-width: 13em;
     }
 
     h1 {
         flex: 1;
         color: get-colour('white');
         font-weight: bold;
-        font-size: calc(2.5rem + 1vw); // Dynamic font size
+        font-size: calc(1.8rem + 1vw); // Dynamic font size
         margin: 0;
         text-align: right;
     }
@@ -178,6 +178,9 @@ header {
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     .footer_section {
         padding: 2rem;
         background-color: get-colour('darkBlue');
@@ -814,5 +817,37 @@ footer {
                 }
             }
         }
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel {
+        display: flex;
+        justify-content: center;
+        max-height: 25em;
+        background-color: get-colour('black');
+        .carousel_image_container {
+            height: 25em;
+            width: auto;
+        }
+        .carousel_image {
+            height: 100%;
+            width: auto;
+        }
+        .carousel_button{
+            color: get-colour('white');
+            font-size: larger;
+        }
+    }
+
+    .about, .upcomingEvents, .contact {
+        text-align: justify;
+    }
+
+    footer{
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        background-color: get-colour('darkBlue');
     }
 }
