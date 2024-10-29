@@ -792,6 +792,28 @@ footer .footer_section .socials a:hover svg {
   .search_results .result .image {
     max-width: 20%;
   }
+  .search_result {
+    justify-content: center;
+    align-items: center;
+  }
+  .search_result .bio {
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .search_result .bio_image {
+    max-width: 20%;
+  }
+  .search_result .bio_words {
+    max-width: 50%;
+  }
+  .search_result .file {
+    width: 75%;
+  }
+  .search_result .file iframe {
+    height: 35em;
+  }
   footer {
     flex-direction: row;
     justify-content: space-evenly;
