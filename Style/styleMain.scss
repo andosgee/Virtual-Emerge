@@ -854,6 +854,19 @@ footer {
             min-height: 25em;
         }
     }
+    .manage-users{
+        flex-direction: row;
+        justify-content: space-evenly;
+        .user-list{
+            width: 30%;
+        }
+        .user-form{
+            width: 60%;
+            .save-button, .reset-password-button, .add-student-button, .remove-student-button, .cancel-button{
+                min-width: 100%;
+            }
+        }
+    }
 
     footer{
         flex-direction: row;

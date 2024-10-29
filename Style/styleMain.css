@@ -755,6 +755,19 @@ footer .footer_section .socials a:hover svg {
     align-items: center;
     min-height: 25em;
   }
+  .manage-users {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .manage-users .user-list {
+    width: 30%;
+  }
+  .manage-users .user-form {
+    width: 60%;
+  }
+  .manage-users .user-form .save-button, .manage-users .user-form .reset-password-button, .manage-users .user-form .add-student-button, .manage-users .user-form .remove-student-button, .manage-users .user-form .cancel-button {
+    min-width: 100%;
+  }
   footer {
     flex-direction: row;
     justify-content: space-evenly;
