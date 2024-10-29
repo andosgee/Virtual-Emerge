@@ -773,3 +773,46 @@ footer {
 
     }
 }
+
+.event{
+    padding: 2rem;
+    h2 {
+        font-size: 2rem;
+        color: get-colour('darkBlue');
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    iframe {
+        width: 100%;
+        height: 40em;
+        border: none;
+        border-radius: 1em;
+        margin-top: 1rem;
+    }
+}
+
+.event_students {
+    padding: 2rem;
+    text-align: center;
+
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 0.5rem;
+
+            a {
+                font-size: 1rem;
+                color: get-colour('brightBlue');
+                text-decoration: none;
+                transition: color 0.5s;
+                &:hover {
+                    text-decoration: underline;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+}

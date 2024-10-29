@@ -677,4 +677,43 @@ footer .footer_section .socials a:hover svg {
 }
 .search_result .file a:hover {
   text-decoration: underline;
+}
+
+.event {
+  padding: 2rem;
+}
+.event h2 {
+  font-size: 2rem;
+  color: #0C586E;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.event iframe {
+  width: 100%;
+  height: 40em;
+  border: none;
+  border-radius: 1em;
+  margin-top: 1rem;
+}
+
+.event_students {
+  padding: 2rem;
+  text-align: center;
+}
+.event_students ul {
+  list-style: none;
+  padding: 0;
+}
+.event_students ul li {
+  margin-bottom: 0.5rem;
+}
+.event_students ul li a {
+  font-size: 1rem;
+  color: #4BB3FD;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+.event_students ul li a:hover {
+  text-decoration: underline;
+  font-weight: bolder;
 }/*# sourceMappingURL=styleMain.css.map */
