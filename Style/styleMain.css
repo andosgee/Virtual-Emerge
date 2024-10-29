@@ -745,6 +745,16 @@ footer .footer_section .socials a:hover svg {
   .about, .upcomingEvents, .contact {
     text-align: justify;
   }
+  .tiles {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
+  .tiles .tile, .tiles .tile_link {
+    justify-content: center;
+    align-items: center;
+    min-height: 25em;
+  }
   footer {
     flex-direction: row;
     justify-content: space-evenly;

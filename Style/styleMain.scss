@@ -844,6 +844,17 @@ footer {
         text-align: justify;
     }
 
+    .tiles {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 1rem;
+        .tile, .tile_link{
+            justify-content: center;
+            align-items: center;
+            min-height: 25em;
+        }
+    }
+
     footer{
         flex-direction: row;
         justify-content: space-evenly;
