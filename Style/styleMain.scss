@@ -575,3 +575,201 @@ footer {
         }
     }
 }
+
+.search_expanded{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    margin: 0 auto;
+    padding: 0.8em;
+    background-color: get-colour('darkBlue');
+
+    .search_term{
+        margin-bottom: 0.5em;
+        .search_form_input{
+            flex: 1;
+            font-size: 1.0em;
+            padding: 0.5em;
+            font-size: $main-sizing;
+            background-color: get-colour('brightBlue');
+            color: get-colour('white');
+            border: none;
+            border-radius: 1em;
+            outline: none;
+            box-shadow: none;
+
+            &:focus {
+                border-color: get-colour('brightBlue');
+            }
+        }
+
+        .search_form_button{
+            background: url('./Assets/Icons/search-icon.svg') no-repeat center center;
+            background-size:3em;
+            color: get-colour('white');
+            width: 2em;
+            height: 2em;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            outline: none;
+            img{
+                width: 1.5em;
+            }
+        }
+    }
+
+    .filter_sort{
+        margin-bottom: 0.5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        label {
+            font-size: 0.8em;
+            margin: 0.3em;
+            align-self: center;
+            font-weight: bolder;
+            color: get-colour('white');
+        }
+
+        select {
+            margin: 0.3em;
+            padding: 0.5em;
+            font-size: 0.8rem;
+            border: 1px solid get-colour('lightGray');
+            border-radius: 0.5em;
+            outline: none;
+            background-color: get-colour('white');
+            color: get-colour('black');
+            cursor: pointer;
+
+            &:focus {
+                border-color: get-colour('brightBlue');
+                outline: 2px solid get-colour('brightBlue');
+            }
+        }
+
+        .apply-button {
+            margin-left: 0.2em;
+            font-size: 0.8rem;
+            padding: 0.5rem;
+            background-color: get-colour('brightBlue');
+            color: get-colour('black');
+            font-weight: bolder;
+            border: none;
+            border-radius: 0.5em;
+            transition: background-color 0.3s;
+            &:hover {
+                background-color: get-colour('lightGray');
+            }
+        }
+    }
+}
+
+.search_results{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0.8em;
+    background-color: get-colour('white');
+    
+    .result{
+        padding: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
+        text-decoration: none;
+        color: get-colour('black');
+        border-radius: 0.5em;
+        transition: background-color 0.3s;
+        &:hover{
+            background-color: get-colour('brightBlue');
+        }
+        .info{
+            max-width: 50%;
+        }
+        .image{
+            max-width: 50%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 75%;
+                border-radius: 2.5em;
+            }
+        }
+    }
+}
+
+.search_result{
+    display: flex;
+    margin: 1.5em;
+    display: flex;
+    flex-direction: column;
+    .bio{
+        display: flex;
+        flex-direction: column;
+        &_image{
+            max-width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 75%;
+                border-radius: 2.5em;
+            }
+        }
+        &_words{
+            h2 {
+                font-size: 2rem;
+                color: get-colour('darkBlue');
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                color: get-colour('brightBlue');
+                margin-bottom: 0.5rem;
+                text-align: center;
+            }
+        }
+    }
+    .file{
+        margin-top: 1rem;
+
+        h2 {
+            font-size: 2rem;
+            color: get-colour('darkBlue');
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 41em;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            font-size: 1rem;
+            color: get-colour('brightBlue');
+            text-decoration: none;
+            font-weight: bold;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>&lt;EMERGE&gt; | Search</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Language" content="en-NZ">
+        <link rel="stylesheet" type="text/css" href="Style/styleMain.css">
+    </head>
+    <body>
+        <header>
+            <img src="Assets/Icons/araLandscapeWhite.png" alt="Ara Logo" class="araLogo">
+            <h1>&lt;EMERGE&gt;</h1>
+        </header>
+        <div class="search_expanded">
+            <form class="search_term">
+                <input type="text" name="search" class="search_form_input" placeholder="">
+                <button type="submit" class="search_form_button">
+                    <img src="Assets/Icons/search-icon.svg" alt="Search">
+                </button>
+            </form>
+            <form class="filter_sort">
+                <label for="filter">Filter:</label>
+                <select name="filter" id="filter">
+                    <option value="none">None</option>
+                    <option value="year">Event</option>
+                    <option value="st_name">Student Name</option>
+                    <option value="pathway">Pathway</option>
+                </select>
+                <label for="sort">Sort:</label>
+                <select name="sort" id="sort">
+                    <option value="relevance">Relevance</option>
+                    <option value="date_n2o">Date: New to Old</option>
+                    <option value="date_o2n">Date: Old to New</option>
+                    <option value="alpha_a2z">Alphabetical: A to Z</option>
+                    <option value="alpha_z2a">Alphabetical: Z to A</option>
+                </select>
+                <button class="apply-button">Filter/Sort</button>
+            </form>
+        </div>
+        <div class="search_results">
+            <a class="result" href="searchResult.html">
+                <div class="info">
+                    <h2>Example Student</h2>
+                    <h3>Pathway: Software</h3>
+                    <h3>Project: Example</h3>
+                    <h3>Event: 2024 Semester 1</h3>
+                </div>
+                <div class="image">
+                    <img src="Assets/Uploads/Headshots/Jacob Klemick.jpg" alt="student">
+                </div>
+            </a>
+            <a class="result" href="event.html">
+                <div class="info">
+                    <h2>Example Event</h2>
+                    <h3>Date: 2024</h3>
+                    <h3>Semester: 1</h3>
+                    <h3>Location: Ara Institute of Canterbury</h3>
+                </div>
+                <div class="image">
+                    <img src="Assets/Carousel/EmergeBanner.png" alt="Event Image">
+                </div>
+            </a>
+        </div>
+        <footer>
+            <div class="footer_section">
+                <h3>Contact Information &amp; Socials</h3>
+                <p>Email: <a href="mailto:email@email">email@email</a></p>
+                <p>Phone: <a href="tel:123456789">123456789</a></p>
+                <div class="socials">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="Assets/Icons/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <img src="Assets/Icons/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.ara.ac.nz" target="_blank">
+                        <img src="Assets/Icons/website.svg" alt="Website">
+                    </a>
+                </div>
+            </div>
+            <div class="footer_section">
+                <h3>Admin Area</h3>
+                <p><a href="adminLogin.html">Admin Login</a></p>
+            </div>
+            <div class="footer_section">
+                <p>&copy; 2024 Ara Institute of Canterbury. All rights reserved.</p>
+                <p><a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
+            </div>
+        </footer>
+    </body>
+</html>
