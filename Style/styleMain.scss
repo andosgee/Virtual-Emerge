@@ -957,7 +957,10 @@ footer {
 
     .about, .upcomingEvents, .contact {
         text-align: justify;
-        
+        max-width: 65%;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
     }
 
     .upcomingEvents{
