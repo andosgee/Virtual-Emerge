@@ -25,11 +25,12 @@ body {
     padding: 0;
 }
 
-header {
+.header_link {
     display: flex;
     align-items: center;
     padding: 1em;
     background-color: get-colour('darkBlue');
+    text-decoration: none;
 
     .araLogo {
         padding: 1em 1em 2em 1em;

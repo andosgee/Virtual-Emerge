@@ -10,17 +10,18 @@ body {
   padding: 0;
 }
 
-header {
+.header_link {
   display: flex;
   align-items: center;
   padding: 1em;
   background-color: #0C586E;
+  text-decoration: none;
 }
-header .araLogo {
+.header_link .araLogo {
   padding: 1em 1em 2em 1em;
   max-width: 13em;
 }
-header h1 {
+.header_link h1 {
   flex: 1;
   color: #FFFFFC;
   font-weight: bold;
