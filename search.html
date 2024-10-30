@@ -16,17 +16,14 @@
         
         <div class="search_expanded">
             <form class="search_term">
-                <input type="text" name="search" class="search_form_input" placeholder="">
-                <button type="submit" class="search_form_button">
-                    <img src="Assets/Icons/search-icon.svg" alt="Search">
-                </button>
+                <input type="text" name="search" class="search_form_input" placeholder="Search...">
             </form>
             <form class="filter_sort">
                 <label for="filter">Filter:</label>
                 <select name="filter" id="filter">
                     <option value="none">None</option>
-                    <option value="year">Event</option>
-                    <option value="st_name">Student Name</option>
+                    <option value="event">Event</option>
+                    <option value="student">Student Name</option>
                     <option value="pathway">Pathway</option>
                 </select>
                 <label for="sort">Sort:</label>
@@ -37,12 +34,14 @@
                     <option value="alpha_a2z">Alphabetical: A to Z</option>
                     <option value="alpha_z2a">Alphabetical: Z to A</option>
                 </select>
-                <button class="apply-button">Filter/Sort</button>
             </form>
+            <script src="JavaScript/sort.js">
+                
+            </script>
         </div>
         <p class="searchMessage">Search and Sort for Students, Pathways, Projects, or Events.</p>
         <div class="search_results">
-            <a class="result" href="searchResult.html">
+            <a class="result" href="searchResult.html" data-date="2024" data-type="student" data-name="Jacob" data-pathway="software">
                 <div class="info">
                     <h2>Example Student</h2>
                     <h3>Pathway: Software</h3>
@@ -53,7 +52,7 @@
                     <img src="Assets/Uploads/Headshots/Jacob Klemick.jpg" alt="student">
                 </div>
             </a>
-            <a class="result" href="event.html">
+            <a class="result" href="event.html" data-date="2024" data-type="Event">
                 <div class="info">
                     <h2>Example Event</h2>
                     <h3>Date: 2024</h3>
