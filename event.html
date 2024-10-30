@@ -34,11 +34,28 @@
             <br>
             On the pop-up, use the PDF viewer to view the file or view it larger.
         </div>
+
+        <div class="gallery">
+            <h3>Image Gallery</h3>
+            <div class="main-image">
+                <img id="bigImage" src="Assets/Uploads/Gallery/IMG_1908.jpg" alt="Main Image">
+            </div>
+            <div class="thumbnails">
+                <img class="thumbnail" src="Assets/Uploads/Gallery/IMG_1908.jpg" alt="Thumbnail 1" onclick="updateMainImage('Assets/Uploads/Gallery/IMG_1908.jpg')">
+                <img class="thumbnail" src="Assets/Uploads/Gallery/IMG_1909.jpg" alt="Thumbnail 2" onclick="updateMainImage('Assets/Uploads/Gallery/IMG_1909.jpg')">
+                <img class="thumbnail" src="Assets/Uploads/Gallery/IMG_1938.jpg" alt="Thumbnail 3" onclick="updateMainImage('Assets/Uploads/Gallery/IMG_1938.jpg')">
+                <img class="thumbnail" src="Assets/Uploads/Gallery/IMG_1940.jpg" alt="Thumbnail 4" onclick="updateMainImage('Assets/Uploads/Gallery/IMG_1940.jpg')">
+            </div>
+        </div>
+
+        <script src="JavaScript/gallery.js"></script>
+
         <div class="event_brochure">
             <h3>Event Brochure</h3>
             <iframe src="Assets/Uploads/Brochures/2024 Sem 1.pdf" frameborder="0" scrolling="no" width="100%" height="600px"></iframe>
             Not Displaying? <a href="Assets/Uploads/Brochures/2024 Sem 1.pdf" target="_blank">Download PDF.</a>
         </div>
+        
         <div class="event_students">
             Event not loading? Look at the students' work below:
             <ul>
