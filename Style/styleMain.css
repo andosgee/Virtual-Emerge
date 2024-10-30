@@ -723,6 +723,36 @@ footer .footer_section .socials a:hover svg {
   margin-top: 1rem;
 }
 
+.event_brochure {
+  margin-top: 1rem;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.event_brochure h2 {
+  font-size: 2rem;
+  color: #0C586E;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.event_brochure iframe {
+  width: 100%;
+  height: 41em;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.event_brochure a {
+  font-size: 1rem;
+  color: #4BB3FD;
+  text-decoration: none;
+  font-weight: bold;
+}
+.event_brochure a:hover {
+  text-decoration: underline;
+}
+
 .event_students {
   padding: 2rem;
   text-align: center;
@@ -813,6 +843,9 @@ footer .footer_section .socials a:hover svg {
   }
   .search_results .result .image {
     max-width: 20%;
+  }
+  .event_brochure {
+    width: 65%;
   }
   .search_result {
     justify-content: center;
