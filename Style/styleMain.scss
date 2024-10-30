@@ -49,10 +49,25 @@ body {
 
 .search {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     padding: 1rem;
     background-color: get-colour('darkBlue');
-
+    p{
+        color: get-colour('white');
+        font-weight: bolder;
+        font-style: italic;
+        font-size: 0.8em;
+        a{
+            color: get-colour('white');
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
     .search_form {
         display: flex;
         width: 60%;
@@ -578,6 +593,11 @@ footer {
             }
         }
     }
+}
+
+.searchMessage{
+    text-align: center;
+    font-weight: bolder;
 }
 
 .search_expanded{

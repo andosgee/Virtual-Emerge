@@ -32,9 +32,25 @@ body {
 
 .search {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 1rem;
   background-color: #0C586E;
+}
+.search p {
+  color: #FFFFFC;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 0.8em;
+}
+.search p a {
+  color: #FFFFFC;
+  text-decoration: none;
+}
+.search p a:hover {
+  text-decoration: underline;
 }
 .search .search_form {
   display: flex;
@@ -502,6 +518,11 @@ footer .footer_section .socials a:hover svg {
 .manage-users .user-form .details .cancel-button:hover, .manage-users .user-form .details .remove-student-button:hover {
   background-color: #0C586E;
   color: #FFFFFC;
+}
+
+.searchMessage {
+  text-align: center;
+  font-weight: bolder;
 }
 
 .search_expanded {
