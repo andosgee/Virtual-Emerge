@@ -23,7 +23,8 @@ CREATE TABLE IF NOT EXISTS event (
     event_id INT AUTO_INCREMENT PRIMARY KEY,
     EventName VARCHAR(100) NOT NULL,
     EventDate DATE NOT NULL,
-    TourLink VARCHAR(200) NOT NULL
+    TourLink VARCHAR(200) NOT NULL,
+    Publish BOOLEAN NOT NULL
 )ENGINE=InnoDB;
 
 -- Students Table
@@ -31,7 +32,10 @@ CREATE TABLE IF NOT EXISTS students (
     student_id INT AUTO_INCREMENT PRIMARY KEY,
     FirstName VARCHAR(100) NOT NULL,
     LastName VARCHAR(100) NOT NULL,
-    Pathway ENUM('Software', 'Networking', 'Information') NOT NULL
+    Pathway ENUM('Software', 'Networking', 'Information') NOT NULL,
+    ProjectName VARCHAR(100) NOT NULL,
+    Event_ID INT,
+    FOREIGN KEY (Event_ID) REFERENCES event(event_id)
 )ENGINE=InnoDB;
 
 -- Assets Table

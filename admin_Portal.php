@@ -40,7 +40,7 @@
 
                     if($count == 0) {
                         echo '<p>There are no events.</p>';
-                    } elseif ($event == 1) {
+                    } elseif ($count == 1) {
                         echo '<p>There is ' . $count . ' event.</p>';
                     } else {
                         echo '<p>There are ' . $count . ' events.</p>';
@@ -69,7 +69,7 @@
                         </div>
                     </div>
             </a>
-            <a href="manageEvents.html" class="tile_link">
+            <a href="manage_Events.php" class="tile_link">
                 <h2>Manage Events</h2>
                 <div class="tile_sidebyside">
                     <div class="tile_left">
