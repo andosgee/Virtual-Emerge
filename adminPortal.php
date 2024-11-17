@@ -1,18 +1,13 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>&lt;EMERGE&gt; | Admin Portal</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="Content-Language" content="en-NZ">
-        <link rel="stylesheet" type="text/css" href="Style/styleMain.css">
-    </head>
+<?php
+        include 'includes/functions.php';
+        include 'includes/head.php';
+    ?>
     <body>
-        <header>
-            <a href="index.html" class="header_link">
-            <img src="Assets/Icons/araLandscapeWhite.png" alt="Ara Logo" class="araLogo">
-            <h1>&lt;EMERGE&gt;</h1>
-            </a>
-        </header>
+    <?php 
+        include 'includes/header.php';
+        ?>
         <div class="search">
             <p>Search for Students, Pathways, Projects, or Events Below.</p>
             <form method="post" action="search.html" class="search_form">
@@ -63,31 +58,8 @@
             </a>
         </div>
 
-        <footer>
-            <div class="footer_section">
-                <h3>Contact Information &amp; Socials</h3>
-                <p>Email: <a href="mailto:email@email">email@email</a></p>
-                <p>Phone: <a href="tel:123456789">123456789</a></p>
-                <div class="socials">
-                    <a href="https://www.facebook.com" target="_blank">
-                        <img src="Assets/Icons/facebook.svg" alt="Facebook">
-                    </a>
-                    <a href="https://www.linkedin.com" target="_blank">
-                        <img src="Assets/Icons/linkedin.svg" alt="LinkedIn">
-                    </a>
-                    <a href="https://www.ara.ac.nz" target="_blank">
-                        <img src="Assets/Icons/website.svg" alt="Website">
-                    </a>
-                </div>
-            </div>
-            <div class="footer_section">
-                <h3>Not an Admin?</h3>
-                <p><a href="index.html">Return to Home</a></p>
-            </div>
-            <div class="footer_section">
-                <p>&copy; 2024 Ara Institute of Canterbury. All rights reserved.</p>
-                <p><a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
-            </div>
-        </footer>
+        <?php
+        include 'includes/footer.php';
+        ?>
     </body>
 </html>
