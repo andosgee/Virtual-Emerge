@@ -7,17 +7,9 @@
     <body>
     <?php 
         include 'includes/header.php';
+        include 'includes/search.php';
         ?>
-        <div class="search">
-            <p>Search for Students, Pathways, Projects, or Events Below.</p>
-            <form method="post" action="search.html" class="search_form">
-                <input type="text" class="search_form_input" placeholder="Search...">
-                <button type="submit" class="search_form_button" >
-                    <img src="Assets/Icons/search-icon.svg" alt="Search">
-                </button>
-            </form>
-            <p><a href="event.html">Click Here to go to the Most Recent Event.</a></p>
-        </div>
+        
         <div class="manage-users">
             <div class="user-list">
                 <h2>Manage Users</h2>

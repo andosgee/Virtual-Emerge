@@ -8,6 +8,7 @@
     <?php 
         include 'includes/header.php';
         checkAdmin();
+        include 'includes/search.php';
 
         include_once 'Classes/Database.php';
         $db = new Database();
@@ -19,14 +20,7 @@
         $stmt->execute();
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         ?>
-        <div class="search">
-            <form method="post" class="search_form">
-                <input type="text" class="search_form_input" placeholder="Search...">
-                <button type="submit" class="search_form_button">
-                    <img src="Assets/Icons/search-icon.svg" alt="Search">
-                </button>
-            </form>
-        </div>
+        
         <div class="manage-users">
             <div class="user-form">
                 <form class="details" method="post" action="Includes/updateDetails.php">
