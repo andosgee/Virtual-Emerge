@@ -7,6 +7,22 @@
     <body>
     <?php 
         include 'includes/header.php';
+        include_once 'Classes/Database.php';
+        $db = new Database();
+        $conn = $db->connect();
+
+        $queryStudents = "SELECT * FROM students";
+        $stmt = $conn->prepare($queryStudents);
+        $stmt->execute();
+        $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        $queryEvents = "SELECT * FROM event";
+        $stmt = $conn->prepare($queryEvents);
+        $stmt->execute();
+        $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+
         ?>
         
         <div class="search_expanded">
@@ -36,28 +52,43 @@
         </div>
         <p class="searchMessage">Search and Sort for Students, Pathways, Projects, or Events.</p>
         <div class="search_results">
-            <a class="result" href="searchResult.html" data-date="2024" data-type="student" data-name="Jacob" data-pathway="software">
+            <?php foreach($students as $student): 
+                $dateQuery = "SELECT * FROM event WHERE event_id = :eventID";
+                $stmt = $conn->prepare($dateQuery);
+                $stmt->bindParam(':eventID', $student['Event_ID']);
+                $stmt->execute();
+                $event = $stmt->fetch(PDO::FETCH_ASSOC);
+                $name = $event['EventName'];
+                $date = new DateTime($event['EventDate']);
+                $date = $date->format('Y');
+                ?>
+            <a class="result" href="search_Result.php?ID=<?php echo $student['student_id'];?>" data-date="<?php echo $date;?>" data-type="student" data-name="<?php echo $student['FirstName']. ' '. $student['LastName'];?>" data-pathway="<?php echo $student['Pathway'];?>">
                 <div class="info">
-                    <h2>Example Student</h2>
-                    <h3>Pathway: Software</h3>
-                    <h3>Project: Example</h3>
-                    <h3>Event: 2024 Semester 1</h3>
+                    <h2><?php echo $student['FirstName']. ' '. $student['LastName'];?></h2>
+                    <h3>Pathway: <?php echo $student['Pathway'];?></h3>
+                    <h3>Project: <?php echo $student['ProjectName'];?></h3>
+                    <h3>Event: <?php echo $name;?></h3>
                 </div>
                 <div class="image">
-                    <img src="Assets/Uploads/Headshots/Jacob Klemick.jpg" alt="student">
+                    <img src="Assets/Uploads/Headshots/<?php echo $student['student_id'];?>.jpg" alt="student">
                 </div>
             </a>
-            <a class="result" href="event.html" data-date="2024" data-type="Event">
+            <?php endforeach; ?>
+            <?php foreach($events as $event):
+                $date = new DateTime($event['EventDate']);
+                $date = $date->format('Y'); ?>
+            
+            <a class="result" href="event.php?event_ID=<?php echo $event['event_id'];?>" data-date="<?php echo $date;?>" data-type="Event">
                 <div class="info">
-                    <h2>Example Event</h2>
-                    <h3>Date: 2024</h3>
-                    <h3>Semester: 1</h3>
+                    <h2><?php echo $event['EventName'];?></h2>
+                    <h3>Date: <?php echo $date;?></h3>
                     <h3>Location: Ara Institute of Canterbury</h3>
                 </div>
                 <div class="image">
                     <img src="Assets/Carousel/EmergeBanner.png" alt="Event Image">
                 </div>
             </a>
+            <?php endforeach; ?>
         </div>
         <?php
         include 'includes/footer.php';
