@@ -7,6 +7,9 @@
     <body>
     <?php 
         include 'includes/header.php';
+        include_once 'Classes/Database.php';
+        $db = new Database();
+        $conn = $db->connect();
         ?>
         <div class="search">
             <p>Search for Students, Pathways, Projects, or Events Below.</p>
@@ -20,8 +23,28 @@
         </div>
         <div class="tiles">
             <div class="tile">
-                <h2>Welcome, Name!</h2>
-                <p>There are 2 past Emerge events and one upcoming.</p>
+                <h2>Welcome, <?php echo $_SESSION['name']; ?></h2>
+                <?php 
+                    // Get a count for the events
+                    $query = "SELECT SQL_CALC_FOUND_ROWS * FROM event";
+                    $stmt = $conn->prepare($query);
+                    $stmt->execute();
+                    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                    // Get the count
+                    $countQuery = "SELECT FOUND_ROWS() AS total";
+                    $countStmt = $conn->prepare($countQuery);
+                    $countStmt->execute();
+                    $count = $countStmt->fetch(PDO::FETCH_ASSOC)['total'];
+
+                    if($count == 0) {
+                        echo '<p>There are no events.</p>';
+                    } elseif ($event == 1) {
+                        echo '<p>There is ' . $count . ' event.</p>';
+                    } else {
+                        echo '<p>There are ' . $count . ' events.</p>';
+                    }
+                ?>
             </div>
             <a href="manageUsers.html" class="tile_link">
                     <h2>Manage Users </h2>

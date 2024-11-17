@@ -11,7 +11,7 @@
         <div class="main">
             <div class="login_section">
             <h2>Admin Login</h2>
-            <form method="post" class="login_form">
+            <form method="post" action="includes/login_handler.php" class="login_form">
                 <div class="form_group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>

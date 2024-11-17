@@ -14,4 +14,23 @@ function get_active_page(){ //Get active page as 'example' instead of '/example/
     }
     return $page_name; //Return last element
   }
+
+  function sanitizeInput($input, $db = null)
+{
+    // Trim whitespace from the beginning and end of the string
+    $input = trim($input);
+
+    // Remove HTML tags to prevent XSS
+    $input = strip_tags($input);
+
+    // Convert special characters to HTML entities
+    $input = htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
+
+    // If a mysqli object is provided, use it to escape the string
+    if ($db && $db instanceof mysqli) {
+        $input = $db->real_escape_string($input);
+    }
+
+    return $input;
+}
 ?>
