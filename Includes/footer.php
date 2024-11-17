@@ -17,7 +17,17 @@
             </div>
             <div class="footer_section">
                 <h3>Admin Area</h3>
-                <p><a href="adminLogin.php">Admin Login</a></p>
+                <?php 
+                    if (get_active_page() == "Admin Login") {
+                        echo "<p><a href='index.php'>Not an admin? Return Home</a></p>";
+                    }elseif (isset($_SESSION['ID'])) {
+                        echo "<p><a href='admin_portal.php'>Admin Dashboard</a></p>
+                            <p><a href='admin_logout.php'>Admin Logout</a></p>";
+
+                    } else {
+                        echo "<p><a href='admin_Login.php'>Admin Login</a></p>";
+                    }
+                ?>
             </div>
             <div class="footer_section">
                 <p>&copy; 2024 Ara Institute of Canterbury. All rights reserved.</p>
