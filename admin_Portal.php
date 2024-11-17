@@ -8,6 +8,7 @@
     <?php 
         include 'includes/header.php';
         include_once 'Classes/Database.php';
+        checkAdmin();
         $db = new Database();
         $conn = $db->connect();
         ?>
@@ -57,7 +58,7 @@
                         </div>
                     </div>  
             </a>
-            <a href="myDetails.html" class="tile_link">
+            <a href="my_Details.php" class="tile_link">
                     <h2>My Details</h2>
                     <div class="tile_sidebyside">
                         <div class="tile_left">

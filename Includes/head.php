@@ -6,4 +6,5 @@
         <meta charset="UTF-8">
         <meta http-equiv="Content-Language" content="en-NZ">
         <link rel="stylesheet" type="text/css" href="Style/styleMain.css">
+        <link rel="icon" type="image/png" href="Assets/Favicon/favi.png">
     </head>

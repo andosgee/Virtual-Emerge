@@ -8,6 +8,7 @@
     <?php 
         include 'includes/header.php';
         ?>
+        
         <div class="main">
             <div class="login_section">
             <h2>Admin Login</h2>

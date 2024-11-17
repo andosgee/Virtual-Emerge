@@ -1,6 +1,6 @@
 <?php
 function redirect(){
-    header('Location : /index.php');
+    header('Location: index.php');
   }
 
 function get_active_page(){ //Get active page as 'example' instead of '/example/example.php'
@@ -32,5 +32,11 @@ function get_active_page(){ //Get active page as 'example' instead of '/example/
     }
 
     return $input;
+}
+
+function checkAdmin(){
+    if (!isset($_SESSION['ID'])){
+        redirect();
+    }
 }
 ?>
